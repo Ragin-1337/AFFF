@@ -14,10 +14,9 @@ const connectDB = async () => {
     // Usando MONGODB_URI do .env
     await mongoose.connect(process.env.MONGODB_URI); 
     console.log('MongoDB conectado com sucesso!');
- } catch (err) {
-    console.error('Falha na conexão com o MongoDB:', err.message);
-    process.exit(1); 
- }
+} catch (err) {
+   console.error('Falha na conexão com o MongoDB:', err.message);
+  process.exit(1);  }
 };
 
 connectDB();
